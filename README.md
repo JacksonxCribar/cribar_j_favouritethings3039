@@ -14,12 +14,12 @@ well if you're done reading this then go check my life out!
 - JS
 - GULP
 
-## What you need
-A computer
+## What You Need
+- A computer
 
-Intrest in my life for some reason
+- Intrest in my life for some reason
 
-Internet Connection
+- Internet Connection
 
 ## Main Developer
 Jackson Cribar
