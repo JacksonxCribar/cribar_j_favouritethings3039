@@ -1,1 +1,82 @@
+body 
+{
+    background-color: #2AACD5;
+    
+}
+
+.content 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.intro
+{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro h2
+{
+    font-size: 52px;
+    font-family: 'Segoe UI';
+    color: white;
+}
+
+.intro p{
+    margin-top: 20px;
+    font-size: 24px;
+    color: white;
+    font-family: 'Segoe UI';
+}
+
+.btnGroup
+{
+    margin-top: 60px;
+    width: 100;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.btnGroup button
+{
+    text-align: center;
+    text-transform: uppercase;
+    transition: 1s;
+    box-shadow: 0 0 10px black;
+    display: block;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.btnGroup button:hover
+{
+    -ms-transform: scale(.80);
+        -moz-transform: scale(.80);
+        -webkit-transform: scale(.80);
+        -o-transform: scale(.80);
+        transform: scale(.80);
+}
+
+.btnGroup button
+{
+    width: 200px;
+    height: 50px;
+    margin-left: 20px;
+    border-radius: 30px;
+    
+}
+
+
+
+
 
