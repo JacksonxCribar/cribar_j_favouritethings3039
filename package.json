@@ -1,0 +1,31 @@
+{
+  "name": "cribar_j_favouritethings3039",
+  "version": "1.0.0",
+  "description": "favouritethingspackage",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JacksonxCribar/cribar_j_favouritethings3039.git"
+  },
+  "keywords": [
+    "npm",
+    "node",
+    "package",
+    "management"
+  ],
+  "author": "JC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JacksonxCribar/cribar_j_favouritethings3039/issues"
+  },
+  "homepage": "https://github.com/JacksonxCribar/cribar_j_favouritethings3039#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.43.3"
+  }
+}
