@@ -1,42 +1,45 @@
 import { getData } from "./components/TheDataMiner.js";
     
-
 (() => {
+    const   theTeam = document.querySelector("#btnGroup"),
+            theTemplate = document.querySelector("#Art").content;
 
-    // add stuff below here
+    function buildTeam(info) {
+        info.forEach(person => {
+            let panel = theTemplate.cloneNode(true),
+                memberInfo = panel.firstElementChild.children;
 
-    const theJack = document.querySelector("#")
-    
-    
-    // function getData() {
-    //     fetch("./data.json")
-    //     .then(res => res.json)()
-    //     .then(data => {
-    //         favouriteThing(data);
+            
+            panel.firstElementChild.dataset.key = person.id;
 
-    //     })
-    //     .catch(error => console.error(error));
-    // }
+            memberInfo[0].querySelector('img').src = `images/${person.biopic}`;
+            memberInfo[1].textContent = person.name;
+            memberInfo[2].textContent = person.role;
+            memberInfo[3].textContent = person.nickname;
 
-    // function favouriteThing(info) {
+            
+            theTeam.appendChild(panel);
+        })
+    }
+
+    function getMoreData(event) {
+        if (event.target.closest("section").dataset.key) {
+            let key = event.target.closest("section").dataset.key;
+
+           
+
+            getData({id: key},  showPortfolioData);
+        }
+    }
+
+    function showPortfolioData(data) {
         
-    //     const fav = Object.keys(info);
-    // }
-
-    // fav.forEach(things => {
-    //     let panel = favTemplate.cloneNode(true)
-    //     let favInfo = panel.firstElementChild.children;
-
-    //     favInfo[0] .querySelector('img').src = `images/${info[things].favImage}`;
-    //     favInfo[1].textContent = info[things].title;
-    //     favInfo[2].textContent = info[Things].description;
+        console.log(data);
+    }
 
     
-    //     theFav.appendChild(panel);
+    theTeam.addEventListener("click", getMoreData);
 
-    // })
-
-
-
-
-})();
+    
+    getData(null, buildTeam);
+})()
