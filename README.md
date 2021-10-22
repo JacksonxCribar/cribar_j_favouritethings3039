@@ -8,11 +8,11 @@ but if you have then this is the app for you!
 well if you're done reading this then go check my life out!
 
 ## Built With
-HTML 5
-CSS
-SASS
-JS
-GULP
+- HTML 5
+- CSS
+- SASS
+- JS
+- GULP
 
 ## What you need
 A computer
