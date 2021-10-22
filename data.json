@@ -1,0 +1,21 @@
+{
+    "Art": {
+        "title": "Art",
+        "description": "I Have been making art pieces since around 13 years old, my mom first got me into it and I have been hooked since, you can see one of my pieces on display here",
+        "image": "art.jpg"},
+        
+    "Hockey/Sports": {
+            "title": "Hockey/Sports",
+            "description": "I have been a hockey fan all my life, my favourite team is the Buffalo Sabres! I don't only watch hockey, I'm a big baseball fan and have started to watch more NFL games and F1 races",
+            "image": "hockey.jpg"},
+    
+    "Vintage Clothes": {
+                "title": "Vintage Clothes/Fashtion",
+                "description": "I have been collecting vintage gear for the past 5 years and are always building on my collection of pieces",
+                "image": "clothes.jpg"}
+    
+  
+
+        
+
+}

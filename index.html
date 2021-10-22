@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>Jackson's Favourite Things</title>
+</head>
+<body>
+    <div class="content">
+        <!-- <h1 class="hidden">My Favourite Things</h1> -->
+        <div class="intro">
+            <h2>My Favourite Things</h2>
+            <p>Have you ever wondered about my favourite things?</p>
+            <p>If so this is the place for you!</p>
+            <P>just click any of the buttons to learn more about me!</P>
+        </div>
+
+        <!-- put dyn data here -->
+
+        <div class="btnGroup">
+            <button data-offset="0" class="art btn">Art</button>
+            <button data-offset="1" class="clothes btn">Vintage Clothes</button>
+            <button data-offset="2" class="hockey btn">Hockey/Sports</button>
+        </div>
+
+        <template id="Art">
+            <section class="bio-panel" data-key="">
+                <div class="p_avatar">
+                    <img src="art.jpg" alt="art">
+                </div>
+        
+                
+                <p class="Art stuff here"></p>
+            </section>
+        </template>
+
+
+    </div>
+    
+    <script src="js/main.js" type="module" defer></script>
+</body>
+
+
+</html>
