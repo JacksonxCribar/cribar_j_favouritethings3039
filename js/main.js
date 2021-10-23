@@ -1,45 +1,33 @@
 import { getData } from "./components/TheDataMiner.js";
-    
+
 (() => {
-    const   theTeam = document.querySelector("#btnGroup"),
-            theTemplate = document.querySelector("#Art").content;
+    document.jsonData = null;
 
-    function buildTeam(info) {
-        info.forEach(person => {
-            let panel = theTemplate.cloneNode(true),
-                memberInfo = panel.firstElementChild.children;
+    const
+        buttonGroupElm = document.querySelector("#btnGroup"),
+        thingElm = document.querySelector("#favoriteThing"),
+        titleElm = document.querySelector("#favoriteThing .title"),
+        descriptionElm = document.querySelector("#favoriteThing .description"),
+        imageElm = document.querySelector("#favoriteThing .image");
 
-            
-            panel.firstElementChild.dataset.key = person.id;
+    function setFavoriteThing(event) {
+        if (
+            document.jsonData
+            && event.target.dataset.thing
+            && document.jsonData[event.target.dataset.thing]
+        ) {
+            const
+                thing = event.target.dataset.thing,
+                data = document.jsonData[thing];
 
-            memberInfo[0].querySelector('img').src = `images/${person.biopic}`;
-            memberInfo[1].textContent = person.name;
-            memberInfo[2].textContent = person.role;
-            memberInfo[3].textContent = person.nickname;
-
-            
-            theTeam.appendChild(panel);
-        })
-    }
-
-    function getMoreData(event) {
-        if (event.target.closest("section").dataset.key) {
-            let key = event.target.closest("section").dataset.key;
-
-           
-
-            getData({id: key},  showPortfolioData);
+            thingElm.className = thing;
+            titleElm.innerHTML = data.title;
+            descriptionElm.innerHTML = data.description;
+            imageElm.src = `images/${data.image}`;
         }
     }
 
-    function showPortfolioData(data) {
-        
-        console.log(data);
-    }
+    buttonGroupElm.addEventListener("click", setFavoriteThing);
 
-    
-    theTeam.addEventListener("click", getMoreData);
-
-    
-    getData(null, buildTeam);
+    getData("data.json", buttonGroupElm.children[0]);
 })()
